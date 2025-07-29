@@ -12,10 +12,29 @@
 /* Hide Emergent overlay label */
 [data-testid="emergent-watermark"],
 .emergent-watermark,
-div[style*="position: fixed"][style*="bottom"][style*="right"][style*="z-index"] {
+div[style*="position: fixed"][style*="bottom"][style*="right"][style*="z-index"],
+div[style*="position:fixed"][style*="bottom"][style*="right"],
+div[style*="Made with Emergent"],
+*[title*="Made with Emergent"],
+*[aria-label*="Made with Emergent"],
+div:contains("Made with Emergent"),
+span:contains("Made with Emergent") {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* More specific targeting for bottom-right overlays */
+body > div:last-child[style*="position: fixed"],
+body > div:last-child[style*="bottom: "],
+body > div:last-child[style*="right: "],
+body > *[style*="position: fixed"][style*="bottom"][style*="right"][style*="z-index: 9999"],
+body > *[style*="position: fixed"][style*="bottom"][style*="right"][style*="z-index: 999999"] {
+  display: none !important;
 }
 
 /* Smooth scrolling */
