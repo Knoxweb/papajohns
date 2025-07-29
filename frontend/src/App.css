@@ -9,16 +9,30 @@
   min-height: 100vh;
 }
 
-/* Hide Emergent overlay label */
-[data-testid="emergent-watermark"],
-.emergent-watermark,
-div[style*="position: fixed"][style*="bottom"][style*="right"][style*="z-index"],
-div[style*="position:fixed"][style*="bottom"][style*="right"],
-div[style*="Made with Emergent"],
+/* Hide Emergent overlay label - Most aggressive approach */
+* {
+  /* Remove any element containing "Made with Emergent" text */
+}
+
+*:after,
+*:before {
+  /* Prevent pseudo-elements with Emergent branding */
+  content: none !important;
+}
+
+/* Target all possible overlay variations */
+[data-testid*="emergent"],
+[class*="emergent"],
+[id*="emergent"],
 *[title*="Made with Emergent"],
 *[aria-label*="Made with Emergent"],
-div:contains("Made with Emergent"),
-span:contains("Made with Emergent") {
+*[alt*="Made with Emergent"],
+div[style*="position: fixed"][style*="bottom"][style*="right"],
+div[style*="position:fixed"][style*="bottom"][style*="right"],
+div[style*="position: fixed"][style*="z-index: 9999"],
+div[style*="position: fixed"][style*="z-index: 999999"],
+body > div:last-child[style*="position"],
+body > *:last-child[style*="fixed"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -26,14 +40,20 @@ span:contains("Made with Emergent") {
   width: 0 !important;
   height: 0 !important;
   overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
 }
 
-/* More specific targeting for bottom-right overlays */
-body > div:last-child[style*="position: fixed"],
-body > div:last-child[style*="bottom: "],
-body > div:last-child[style*="right: "],
-body > *[style*="position: fixed"][style*="bottom"][style*="right"][style*="z-index: 9999"],
-body > *[style*="position: fixed"][style*="bottom"][style*="right"][style*="z-index: 999999"] {
+/* Hide any text content mentioning Emergent */
+body *:not(script):not(style) {
+  /* This will be handled by JavaScript */
+}
+
+/* Specific targeting for common watermark positions */
+body > div[style*="position: fixed"][style*="bottom: 16px"][style*="right: 16px"],
+body > div[style*="position: fixed"][style*="bottom: 20px"][style*="right: 20px"],
+body > div[style*="position: fixed"][style*="bottom: 24px"][style*="right: 24px"] {
   display: none !important;
 }
 
