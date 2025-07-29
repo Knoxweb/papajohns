@@ -30,6 +30,56 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Remove Emergent overlay
+  useEffect(() => {
+    const removeOverlay = () => {
+      // Look for common overlay patterns
+      const selectors = [
+        '[data-testid="emergent-watermark"]',
+        '.emergent-watermark',
+        'div[style*="position: fixed"][style*="bottom"][style*="right"]',
+        'div[style*="position:fixed"][style*="bottom"][style*="right"]'
+      ];
+      
+      selectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+          if (el && (el.textContent?.includes('Made with Emergent') || el.innerHTML?.includes('Emergent'))) {
+            el.style.display = 'none';
+            el.style.visibility = 'hidden';
+            el.style.opacity = '0';
+            el.remove();
+          }
+        });
+      });
+
+      // Also check for any fixed positioned elements in bottom right
+      const allFixedElements = document.querySelectorAll('div[style*="position: fixed"], div[style*="position:fixed"]');
+      allFixedElements.forEach(el => {
+        const style = el.getAttribute('style') || '';
+        if (style.includes('bottom') && style.includes('right') && 
+            (el.textContent?.includes('Made with Emergent') || el.textContent?.includes('Emergent'))) {
+          el.remove();
+        }
+      });
+    };
+
+    // Run immediately
+    removeOverlay();
+    
+    // Run periodically to catch dynamically added overlays
+    const overlayInterval = setInterval(removeOverlay, 1000);
+    
+    // Observer for DOM changes
+    const observer = new MutationObserver(removeOverlay);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      clearInterval(overlayInterval);
+      observer.disconnect();
+    };
+  }, []);
+
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
