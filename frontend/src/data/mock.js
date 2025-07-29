@@ -64,8 +64,8 @@ export const mockData = {
     },
     {
       title: "Order Control Center",
-      description: "Streamlined order management with instant accept/decline functionality and detailed order previews.",
-      image: "https://images.unsplash.com/photo-1623824204241-f851d3bcfaf5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85"
+      description: "Professional delivery management dashboard with comprehensive order tracking, executive oversight, and real-time operational control.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmR8ZW58MHx8fHwxNzUzODE0MTM1fDA&ixlib=rb-4.1.0&q=85"
     },
     {
       title: "Live Delivery Tracking",
