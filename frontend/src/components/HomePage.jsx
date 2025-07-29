@@ -86,9 +86,6 @@ const HomePage = () => {
               <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left py-2 text-gray-600 hover:text-red-600">
                 Reviews
               </button>
-              <button onClick={() => scrollToSection('download')} className="block w-full text-left py-2 text-gray-600 hover:text-red-600">
-                Download
-              </button>
             </nav>
           </div>
         )}
