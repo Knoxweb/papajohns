@@ -14,33 +14,33 @@ export const mockData = {
   features: [
     {
       icon: <DollarSign className="h-6 w-6 text-red-600" />,
-      title: "Real-Time Earnings Tracking",
-      description: "Monitor your daily profits, tips, and cash collected with detailed analytics and visual progress indicators."
+      title: "AI-Powered Earnings Analytics",
+      description: "Advanced machine learning algorithms analyze your delivery patterns to maximize earnings with smart route suggestions and optimal timing recommendations."
     },
     {
       icon: <CheckCircle className="h-6 w-6 text-red-600" />,
-      title: "Accept or Decline Orders",
-      description: "Full control over your delivery schedule. Accept orders that fit your route and decline when needed."
+      title: "Smart Order Selection",
+      description: "Intelligent order filtering system that learns your preferences and automatically suggests the most profitable deliveries based on distance, tips, and traffic patterns."
     },
     {
       icon: <Clock className="h-6 w-6 text-red-600" />,
-      title: "Order Management",
-      description: "Manage and deliver orders for customers on time with pickup scheduling and delivery time estimation."
+      title: "Dynamic Schedule Management",
+      description: "Predictive scheduling technology that adapts to real-time conditions, helping you plan deliveries efficiently and maintain optimal work-life balance."
     },
     {
       icon: <Navigation className="h-6 w-6 text-red-600" />,
-      title: "Live Driver Tracking",
-      description: "Real-time GPS tracking with turn-by-turn navigation and route optimization for faster deliveries."
+      title: "Next-Gen GPS Navigation",
+      description: "Ultra-precise tracking with real-time traffic updates, weather considerations, and predictive routing that adapts to changing conditions automatically."
     },
     {
       icon: <Phone className="h-6 w-6 text-red-600" />,
-      title: "Customer Communication",
-      description: "Notify customers via SMS and email with delivery updates and estimated arrival times."
+      title: "Unified Communication Hub",
+      description: "Seamless customer interaction through integrated messaging, automated notifications, and smart delivery updates that enhance customer satisfaction."
     },
     {
       icon: <MapPin className="h-6 w-6 text-red-600" />,
-      title: "Route Optimization",
-      description: "Intelligent routing system that helps you complete more deliveries efficiently and increase earnings."
+      title: "Intelligent Route Optimization",
+      description: "Advanced algorithms process millions of data points to create the most efficient delivery routes, reducing fuel costs and increasing daily earnings potential."
     }
   ],
   
