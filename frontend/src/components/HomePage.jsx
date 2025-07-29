@@ -61,9 +61,6 @@ const HomePage = () => {
               <button onClick={() => scrollToSection('testimonials')} className="text-gray-600 hover:text-red-600 transition-colors">
                 Reviews
               </button>
-              <button onClick={() => scrollToSection('download')} className="text-gray-600 hover:text-red-600 transition-colors">
-                Download
-              </button>
             </nav>
 
             {/* Mobile menu button */}
