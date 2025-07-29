@@ -86,34 +86,34 @@ export const mockData = {
 
   testimonials: [
     {
-      name: "Mike Rodriguez",
+      name: "Marcus Johnson",
       location: "Chicago, IL",
-      comment: "This app has completely transformed how I manage my deliveries. The earnings tracking is amazing and I'm making 30% more per shift!"
+      comment: "The new 2025 redesign is incredible! The AI route suggestions alone have increased my daily earnings by $50. The interface is so much cleaner and faster than before."
     },
     {
-      name: "Sarah Johnson",
+      name: "Isabella Martinez",
       location: "Miami, FL", 
-      comment: "The route optimization feature is a game-changer. I can complete more deliveries in less time and my customers love the real-time updates."
+      comment: "Love the modern design and smart features. The predictive routing actually learns my preferences and the customer communication tools are game-changing. Best delivery app I've used!"
     },
     {
-      name: "David Chen",
+      name: "Ryan Chen",
       location: "Los Angeles, CA",
-      comment: "Finally, an app that actually works! The interface is clean, fast, and has everything I need to run my delivery business efficiently."
+      comment: "This redesigned app is like having a personal assistant. The earnings analytics help me make better decisions and I'm completing 40% more deliveries per shift."
     },
     {
-      name: "Emily Davis",
+      name: "Zoe Thompson",
       location: "New York, NY",
-      comment: "I love having full control over which orders I accept. The app helps me maximize my earnings by choosing the most profitable routes."
+      comment: "The user experience is phenomenal compared to the old version. Everything feels intuitive and the AI-powered features actually make me more money. Highly recommend!"
     },
     {
-      name: "James Wilson",
+      name: "Carlos Rodriguez",
       location: "Houston, TX",
-      comment: "Customer communication features are excellent. My ratings have improved significantly since I started using the notification system."
+      comment: "Finally, an app that uses modern technology properly! The smart order selection and real-time optimization features have transformed how I work. Earning 35% more weekly."
     },
     {
-      name: "Lisa Thompson",
+      name: "Aisha Patel",
       location: "Phoenix, AZ",
-      comment: "The real-time tracking gives me peace of mind and my customers always know exactly when I'll arrive. Professional and reliable!"
+      comment: "The redesigned interface is beautiful and functional. Love how it learns from my delivery patterns and suggests the most profitable routes. This is the future of delivery!"
     }
   ],
 
