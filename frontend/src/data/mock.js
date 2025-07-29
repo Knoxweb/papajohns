@@ -74,8 +74,8 @@ export const mockData = {
     },
     {
       title: "Customer Connect",
-      description: "Professional communication suite with automated SMS/email notifications and delivery status updates.",
-      image: "https://images.pexels.com/photos/5077067/pexels-photo-5077067.jpeg"
+      description: "Automated SMS and text notifications keep customers informed with real-time delivery updates, ETA notifications, and tracking information.",
+      image: "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/fhgmt3o9_delivery-eta-text-notification.webp"
     },
     {
       title: "Performance Analytics",
