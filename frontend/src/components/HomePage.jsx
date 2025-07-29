@@ -123,14 +123,6 @@ const HomePage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  size="lg" 
-                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold"
-                  onClick={() => scrollToSection('download')}
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Now
-                </Button>
-                <Button 
                   variant="outline" 
                   size="lg"
                   className="border-2 border-gray-300 hover:border-red-600 hover:text-red-600 px-8 py-4 text-lg"
