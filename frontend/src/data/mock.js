@@ -69,8 +69,8 @@ export const mockData = {
     },
     {
       title: "Live Delivery Tracking",
-      description: "Real-time delivery monitoring with customer communication tools and live location sharing.",
-      image: "https://images.pexels.com/photos/5077068/pexels-photo-5077068.jpeg"
+      description: "Real-time GPS tracking with turn-by-turn navigation, estimated delivery times, and live route updates for optimal delivery performance.",
+      image: "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/4fwb89a3_map-delivery.jpg"
     },
     {
       title: "Customer Connect",
