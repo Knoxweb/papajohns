@@ -209,25 +209,29 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              See The App In Action
+              Redesigned App Interfaces for 2025
             </h2>
             <p className="text-xl text-gray-600">
-              Modern interface designed for efficiency and ease of use
+              Modern, intuitive design meets powerful functionality
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mockData.screenshots.map((screenshot, index) => (
-              <div key={index} className="text-center">
-                <div className="relative mb-4">
+              <div key={index} className="text-center group">
+                <div className="relative mb-6 overflow-hidden rounded-2xl">
                   <img 
                     src={screenshot.image} 
                     alt={screenshot.title}
-                    className="mx-auto max-w-xs w-full rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className="mx-auto w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Smartphone className="h-4 w-4 text-gray-700" />
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{screenshot.title}</h3>
-                <p className="text-gray-600">{screenshot.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{screenshot.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{screenshot.description}</p>
               </div>
             ))}
           </div>
