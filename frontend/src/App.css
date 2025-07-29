@@ -9,6 +9,15 @@
   min-height: 100vh;
 }
 
+/* Hide Emergent overlay label */
+[data-testid="emergent-watermark"],
+.emergent-watermark,
+div[style*="position: fixed"][style*="bottom"][style*="right"][style*="z-index"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
