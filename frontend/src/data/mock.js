@@ -79,8 +79,8 @@ export const mockData = {
     },
     {
       title: "Performance Analytics",
-      description: "Comprehensive performance metrics with earnings breakdown, delivery statistics, and optimization recommendations.",
-      image: "https://images.unsplash.com/photo-1631016800670-e8245c0833d4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxtb2JpbGUlMjBhcHAlMjBtb2NrdXB8ZW58MHx8fHwxNzUzNzkzODg1fDA&ixlib=rb-4.1.0&q=85"
+      description: "Comprehensive earnings analytics with interactive charts, delivery performance metrics, and data-driven insights to optimize your delivery strategy.",
+      image: "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/osmdun81_performance-analysis.jpg"
     }
   ],
 
