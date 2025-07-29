@@ -251,39 +251,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Download Section */}
-      <section id="download" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-600 to-red-700 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Download the Papa John's Driver App today and take control of your delivery business
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button 
-              size="lg" 
-              className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
-            >
-              <Smartphone className="mr-2 h-5 w-5" />
-              Download for iOS
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
-            >
-              <Smartphone className="mr-2 h-5 w-5" />
-              Download for Android
-            </Button>
-          </div>
-
-          <p className="text-sm opacity-75">
-            Requires an account created by your restaurant management
-          </p>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
