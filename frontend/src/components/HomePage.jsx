@@ -104,16 +104,27 @@ const HomePage = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-red-100 text-red-700 border-red-200 px-4 py-2">
-                  Now Available for Download
+                  🚀 New 2025 Design - Now Available
                 </Badge>
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                  Take Control of Your 
-                  <span className="text-red-600 block">Delivery Routes</span>
+                  The Future of 
+                  <span className="text-red-600 block">Delivery Management</span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  The next-generation Papa John's Driver App gives you complete control over all your orders, 
-                  drivers, and deliveries. Built with modern technology for seamless delivery management.
+                  Experience the completely redesigned Papa John's Driver App with cutting-edge technology, 
+                  intuitive interfaces, and AI-powered features that help drivers earn more and work smarter.
                 </p>
+                <div className="flex items-center space-x-4 pt-2">
+                  <Badge className="bg-green-100 text-green-700 border-green-200">
+                    ✨ AI-Powered Routes
+                  </Badge>
+                  <Badge className="bg-blue-100 text-blue-700 border-blue-200">
+                    📱 Modern Interface
+                  </Badge>
+                  <Badge className="bg-purple-100 text-purple-700 border-purple-200">
+                    💰 30% More Earnings
+                  </Badge>
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
