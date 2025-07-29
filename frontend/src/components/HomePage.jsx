@@ -30,53 +30,111 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Remove Emergent overlay
+  // Remove Emergent overlay - Enhanced approach
   useEffect(() => {
     const removeOverlay = () => {
-      // Look for common overlay patterns
+      // Remove elements by text content
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach(el => {
+        const text = el.textContent || el.innerText || '';
+        if (text.includes('Made with Emergent') || text.includes('Emergent')) {
+          // Check if this is likely a watermark (small, fixed positioned, etc.)
+          const style = window.getComputedStyle(el);
+          if (style.position === 'fixed' || el.style.position === 'fixed') {
+            el.remove();
+          } else if (text.trim() === 'Made with Emergent' || text.trim().includes('Made with Emergent')) {
+            el.remove();
+          }
+        }
+      });
+
+      // Remove by common selectors
       const selectors = [
-        '[data-testid="emergent-watermark"]',
-        '.emergent-watermark',
+        '[data-testid*="emergent"]',
+        '[class*="emergent"]',
+        '[id*="emergent"]',
         'div[style*="position: fixed"][style*="bottom"][style*="right"]',
-        'div[style*="position:fixed"][style*="bottom"][style*="right"]'
+        'div[style*="position:fixed"][style*="bottom"][style*="right"]',
+        'span[style*="position: fixed"]',
+        '*[style*="z-index: 9999"]',
+        '*[style*="z-index: 999999"]'
       ];
       
       selectors.forEach(selector => {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(el => {
-          if (el && (el.textContent?.includes('Made with Emergent') || el.innerHTML?.includes('Emergent'))) {
-            el.style.display = 'none';
-            el.style.visibility = 'hidden';
-            el.style.opacity = '0';
-            el.remove();
-          }
-        });
+        try {
+          const elements = document.querySelectorAll(selector);
+          elements.forEach(el => {
+            const text = el.textContent || el.innerText || '';
+            if (text.includes('Made with Emergent') || text.includes('Emergent') || 
+                el.getAttribute('style')?.includes('bottom') && el.getAttribute('style')?.includes('right')) {
+              el.remove();
+            }
+          });
+        } catch (e) {
+          // Ignore selector errors
+        }
       });
 
-      // Also check for any fixed positioned elements in bottom right
-      const allFixedElements = document.querySelectorAll('div[style*="position: fixed"], div[style*="position:fixed"]');
-      allFixedElements.forEach(el => {
+      // Remove last child if it's a fixed positioned overlay
+      const bodyChildren = Array.from(document.body.children);
+      const lastChild = bodyChildren[bodyChildren.length - 1];
+      if (lastChild) {
+        const style = window.getComputedStyle(lastChild);
+        const inlineStyle = lastChild.getAttribute('style') || '';
+        if ((style.position === 'fixed' || inlineStyle.includes('position: fixed') || inlineStyle.includes('position:fixed')) &&
+            (inlineStyle.includes('bottom') && inlineStyle.includes('right'))) {
+          lastChild.remove();
+        }
+      }
+
+      // Brute force: check all elements for watermark characteristics
+      document.querySelectorAll('div, span').forEach(el => {
         const style = el.getAttribute('style') || '';
-        if (style.includes('bottom') && style.includes('right') && 
-            (el.textContent?.includes('Made with Emergent') || el.textContent?.includes('Emergent'))) {
-          el.remove();
+        const computedStyle = window.getComputedStyle(el);
+        
+        if (computedStyle.position === 'fixed' && 
+            (style.includes('bottom') || computedStyle.bottom !== 'auto') &&
+            (style.includes('right') || computedStyle.right !== 'auto')) {
+          const text = el.textContent || '';
+          if (text.length < 50 && (text.includes('Made') || text.includes('Emergent'))) {
+            el.remove();
+          }
         }
       });
     };
 
-    // Run immediately
+    // Run immediately and multiple times
     removeOverlay();
+    setTimeout(removeOverlay, 100);
+    setTimeout(removeOverlay, 500);
+    setTimeout(removeOverlay, 1000);
     
     // Run periodically to catch dynamically added overlays
-    const overlayInterval = setInterval(removeOverlay, 1000);
+    const overlayInterval = setInterval(removeOverlay, 2000);
     
     // Observer for DOM changes
-    const observer = new MutationObserver(removeOverlay);
-    observer.observe(document.body, { childList: true, subtree: true });
+    const observer = new MutationObserver(() => {
+      setTimeout(removeOverlay, 100);
+    });
+    observer.observe(document.body, { 
+      childList: true, 
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['style', 'class', 'id']
+    });
+
+    // Also listen for window events that might trigger overlay
+    const handleEvent = () => setTimeout(removeOverlay, 100);
+    window.addEventListener('load', handleEvent);
+    window.addEventListener('resize', handleEvent);
+    window.addEventListener('scroll', handleEvent);
 
     return () => {
       clearInterval(overlayInterval);
       observer.disconnect();
+      window.removeEventListener('load', handleEvent);
+      window.removeEventListener('resize', handleEvent);
+      window.removeEventListener('scroll', handleEvent);
     };
   }, []);
 
