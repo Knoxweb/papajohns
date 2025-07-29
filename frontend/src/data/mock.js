@@ -45,42 +45,42 @@ export const mockData = {
   ],
   
   appScreenshots: [
-    "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/c4gb4pht_unnamed%20%285%29.webp",
-    "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/aaf141vc_unnamed%20%281%29.webp",
-    "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/ywjzuzhy_unnamed%20%282%29.webp",
-    "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/fmmc0jgh_unnamed%20%283%29.webp"
+    "https://images.unsplash.com/photo-1587377838865-38ab492fdad3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85",
+    "https://images.unsplash.com/photo-1599950753725-ea5d8aba0d29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85",
+    "https://images.unsplash.com/photo-1623824204241-f851d3bcfaf5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85",
+    "https://images.pexels.com/photos/5077068/pexels-photo-5077068.jpeg"
   ],
 
   screenshots: [
     {
-      title: "Daily Overview",
-      description: "Track your earnings, orders delivered, and performance metrics in one comprehensive dashboard.",
-      image: "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/c4gb4pht_unnamed%20%285%29.webp"
+      title: "Smart Dashboard",
+      description: "Modern earnings dashboard with real-time analytics, daily profit tracking, and performance insights at your fingertips.",
+      image: "https://images.unsplash.com/photo-1587377838865-38ab492fdad3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85"
     },
     {
-      title: "Order Management",
-      description: "Accept or decline deliveries with detailed order information and estimated completion times.",
-      image: "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/aaf141vc_unnamed%20%281%29.webp"
+      title: "Intelligent Route Planning",
+      description: "Advanced GPS navigation with AI-powered route optimization for maximum efficiency and faster deliveries.",
+      image: "https://images.unsplash.com/photo-1599950753725-ea5d8aba0d29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85"
     },
     {
-      title: "Live Tracking",
-      description: "Real-time GPS navigation with route optimization and customer location mapping.",
-      image: "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/ywjzuzhy_unnamed%20%282%29.webp"
+      title: "Order Control Center",
+      description: "Streamlined order management with instant accept/decline functionality and detailed order previews.",
+      image: "https://images.unsplash.com/photo-1623824204241-f851d3bcfaf5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85"
     },
     {
-      title: "Order Details",
-      description: "Complete order information with pickup times, customer details, and delivery instructions.",
-      image: "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/fmmc0jgh_unnamed%20%283%29.webp"
+      title: "Live Delivery Tracking",
+      description: "Real-time delivery monitoring with customer communication tools and live location sharing.",
+      image: "https://images.pexels.com/photos/5077068/pexels-photo-5077068.jpeg"
     },
     {
-      title: "Delivery Tracking",
-      description: "Monitor delivery progress with real-time updates and customer communication tools.",
-      image: "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/gd87lol6_unnamed%20%284%29.webp"
+      title: "Customer Connect",
+      description: "Professional communication suite with automated SMS/email notifications and delivery status updates.",
+      image: "https://images.pexels.com/photos/5077067/pexels-photo-5077067.jpeg"
     },
     {
-      title: "Customer Notifications",
-      description: "Send SMS and email updates to customers about delivery status and estimated arrival times.",
-      image: "https://customer-assets.emergentagent.com/job_c4c6fd92-58b8-4f71-a30d-75bc91901b82/artifacts/x6z8sg3x_logo.webp"
+      title: "Performance Analytics",
+      description: "Comprehensive performance metrics with earnings breakdown, delivery statistics, and optimization recommendations.",
+      image: "https://images.unsplash.com/photo-1631016800670-e8245c0833d4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxtb2JpbGUlMjBhcHAlMjBtb2NrdXB8ZW58MHx8fHwxNzUzNzkzODg1fDA&ixlib=rb-4.1.0&q=85"
     }
   ],
 
