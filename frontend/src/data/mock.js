@@ -48,7 +48,7 @@ export const mockData = {
     "https://images.unsplash.com/photo-1587377838865-38ab492fdad3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85",
     "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/5p1wog88_routeplanning.jpg",
     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmR8ZW58MHx8fHwxNzUzODE0MTM1fDA&ixlib=rb-4.1.0&q=85",
-    "https://images.pexels.com/photos/5077068/pexels-photo-5077068.jpeg"
+    "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/4fwb89a3_map-delivery.jpg"
   ],
 
   screenshots: [
