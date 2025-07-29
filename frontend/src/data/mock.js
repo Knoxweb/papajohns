@@ -59,8 +59,8 @@ export const mockData = {
     },
     {
       title: "Intelligent Route Planning",
-      description: "Advanced GPS navigation with AI-powered route optimization for maximum efficiency and faster deliveries.",
-      image: "https://images.unsplash.com/photo-1599950753725-ea5d8aba0d29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxkZWxpdmVyeSUyMGFwcCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NTM4MTMyMTZ8MA&ixlib=rb-4.1.0&q=85"
+      description: "Advanced GPS navigation with AI-powered route optimization featuring real-time traffic analysis and multi-stop delivery planning.",
+      image: "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/5p1wog88_routeplanning.jpg"
     },
     {
       title: "Order Control Center",
