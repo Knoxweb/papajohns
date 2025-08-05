@@ -45,10 +45,10 @@ export const mockData = {
   ],
   
   appScreenshots: [
-    "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/osmdun81_performance-analysis.jpg",
-    "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/5p1wog88_routeplanning.jpg",
+    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=85&w=400",
+    "https://images.unsplash.com/photo-1524661135-423995f22d0b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=85&w=400",
     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmR8ZW58MHx8fHwxNzUzODE0MTM1fDA&ixlib=rb-4.1.0&q=85",
-    "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/4fwb89a3_map-delivery.jpg"
+    "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=85&w=400"
   ],
 
   screenshots: [
@@ -60,7 +60,7 @@ export const mockData = {
     {
       title: "Intelligent Route Planning",
       description: "Advanced GPS navigation with AI-powered route optimization featuring real-time traffic analysis and multi-stop delivery planning.",
-      image: "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/5p1wog88_routeplanning.jpg"
+      image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=85"
     },
     {
       title: "Order Control Center",
@@ -70,17 +70,17 @@ export const mockData = {
     {
       title: "Live Delivery Tracking",
       description: "Real-time GPS tracking with turn-by-turn navigation, estimated delivery times, and live route updates for optimal delivery performance.",
-      image: "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/4fwb89a3_map-delivery.jpg"
+      image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=85"
     },
     {
       title: "Customer Connect",
       description: "Automated SMS and text notifications keep customers informed with real-time delivery updates, ETA notifications, and tracking information.",
-      image: "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/fhgmt3o9_delivery-eta-text-notification.webp"
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=85"
     },
     {
       title: "Performance Analytics",
       description: "Comprehensive earnings analytics with interactive charts, delivery performance metrics, and data-driven insights to optimize your delivery strategy.",
-      image: "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/osmdun81_performance-analysis.jpg"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=85"
     }
   ],
 
