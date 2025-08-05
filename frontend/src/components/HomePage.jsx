@@ -22,6 +22,19 @@ import { mockData } from '../data/mock';
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [imageErrors, setImageErrors] = useState({});
+
+  // Working slideshow images
+  const slideshowImages = [
+    "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/osmdun81_performance-analysis.jpg",
+    "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/5p1wog88_routeplanning.jpg",
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3&q=85&w=400",
+    "https://customer-assets.emergentagent.com/job_papajohns-driver/artifacts/4fwb89a3_map-delivery.jpg"
+  ];
+
+  // Filter out broken images
+  const workingImages = slideshowImages.filter((_, index) => !imageErrors[index]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,6 +42,24 @@ const HomePage = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  // Slideshow auto-advance
+  useEffect(() => {
+    if (workingImages.length === 0) return;
+    
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % workingImages.length);
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, [workingImages.length]);
+
+  const handleImageError = (index) => {
+    setImageErrors(prev => ({
+      ...prev,
+      [index]: true
+    }));
+  };
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -136,12 +167,55 @@ const HomePage = () => {
             </div>
 
             <div className="relative">
-              <div className="relative z-10">
-                <img 
-                  src={mockData.appScreenshots[activeFeature]} 
-                  alt="App Screenshot"
-                  className="mx-auto max-w-sm w-full rounded-3xl shadow-2xl"
-                />
+              <div className="relative z-10 overflow-hidden rounded-3xl shadow-2xl bg-gray-100">
+                <div className="relative w-full max-w-sm mx-auto h-96">
+                  {workingImages.length > 0 ? (
+                    <>
+                      {workingImages.map((image, slideIndex) => (
+                        <div
+                          key={slideIndex}
+                          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                            currentSlide === slideIndex ? 'opacity-100' : 'opacity-0'
+                          }`}
+                        >
+                          <img
+                            src={image}
+                            alt={`App Screenshot ${slideIndex + 1}`}
+                            className="w-full h-full object-cover"
+                            onError={() => {
+                              const originalIndex = slideshowImages.indexOf(image);
+                              handleImageError(originalIndex);
+                            }}
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
+                      
+                      {/* Slideshow indicators */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {workingImages.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentSlide(index)}
+                            className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                              currentSlide === index 
+                                ? 'bg-white' 
+                                : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    /* Fallback content if all images fail */
+                    <div className="flex items-center justify-center h-full bg-gradient-to-br from-red-100 to-green-100">
+                      <div className="text-center">
+                        <Smartphone className="h-16 w-16 text-red-600 mx-auto mb-4" />
+                        <p className="text-gray-600 font-medium">Papa John's Driver App</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-red-200 to-green-200 rounded-3xl blur-3xl opacity-20 transform scale-110"></div>
             </div>
@@ -279,28 +353,41 @@ const HomePage = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Support</h4>
+              <h4 className="font-semibold mb-4">Contact Us for Details</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Help Center</li>
-                <li>Contact Support</li>
-                <li>Training Resources</li>
-                <li>FAQ</li>
+                <li>
+                  <a 
+                    href="mailto:hello@bluestoneapps.com" 
+                    className="hover:text-white transition-colors"
+                  >
+                    hello@bluestoneapps.com
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="tel:+18656844760" 
+                    className="hover:text-white transition-colors"
+                  >
+                    (865) 684-4760
+                  </a>
+                </li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>About Papa John's</li>
-                <li>Careers</li>
-                <li>Privacy Policy</li>
-                <li>Terms of Service</li>
-              </ul>
+              <div className="flex items-center">
+                <img 
+                  src="https://bluestoneapps.com/wp-content/uploads/2020/10/bluestone-apps-logo-header.png" 
+                  alt="Bluestone Apps" 
+                  className="h-8 w-auto"
+                />
+              </div>
             </div>
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Papa John's International, Inc. All rights reserved.</p>
+            <p>&copy; 2025 Bluestone Apps. All rights reserved.</p>
           </div>
         </div>
       </footer>
